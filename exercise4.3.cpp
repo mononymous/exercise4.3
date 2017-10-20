@@ -6,17 +6,14 @@
 #include <stdio.h>
 int main()
 {
-    int i;
-    char str[100] = "Yamaguchi University.\n";
-    fprintf(stdout, "Printing str:\n   ");
-    i=0;
-    while( str[i] != '\0' )
+    char c0, cstop;
+    cstop = '.';
+    c0 = '\0';
+    while( c0 != cstop)
     {
-        fprintf(stdout, " %2d. Character: < %c [ASCII: %3d(10), %x(16)]>\n", i+1, str[i], str[i], str[i]);
-        i=i+1;
+        fprintf(stdout, "Please, input characters.\n");
+        fscanf(stdin, "%c", &c0);
+        fprintf(stdout, " Letter [%c], ASCII code: %3d.\n", c0, c0);
     }
-    
-    fprintf(stdout, "17-1401-023-3 Kenta Kawaguchi.\n" );
-    
     return 0;
 }
